@@ -1,20 +1,30 @@
 <h1>Index page!</h1>
 <h2>Burgers to be eaten</h2>
-<ul>
+<ol>
     {{#each burger}}
         {{#unless devoured}}
-            {{> burgers/burger-block devour= false}}
+            <li>
+                {{burger_name}}
+                <button class = "devour-it" data-id = "{{id}}" data-newdevoured = "{{devoured}}">
+                    {{#if devoured}}Eaten {{else}}Devour it!{{/if}}
+                </button>
+
+            </li>
         {{/unless}}
     {{/each}}
-</ul>
+</ol>
 
 <h2>Eaten Already</h2>
-{{#each burger}}
-    {{#if devoured}}
-        {{> burgers/burger-block devour = true}}
+<ol>
+    {{#each burger}}
+        {{#if devoured}}
+            <li>
+                {{burger_name}}
+            </li>
+        {{/if}}
+    {{/each}}
+</ol>
 
-    {{/if}}
-{{/each}}
 
 
 <h2>Add a Burger</h2>
