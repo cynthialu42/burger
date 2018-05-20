@@ -45,19 +45,21 @@ var orm = {
                 throw err;
             }
             // Need this callback here bc async run returns undefined
-            cb(rsult);
+            cb(result);
         });
     }, 
 
-    insertOne: function(tableName, columns, values, cb){
-        var queryString = "INSERT INTO " + tableName
-                        + "(" + columns.toString() + ") "
-                        + "VALUES (" + printQuestionMarks(values.length) + ");";
-
-        connection.query(queryString, values, function(err, result){
+    insertOne: function(tableName, column, value, cb){
+        // var queryString = "INSERT INTO " + tableName
+        //                 + "(" + column + ") "
+        //                 + "VALUES (?)";
+        var queryString = "INSERT INTO " + tableName + "(" + column + ") VALUES(?);";
+        console.log(queryString);
+        connection.query(queryString, value, function(err, result){
             if(err){
                 throw err;
             }
+            //console.log("ORM result: " + result);
             cb(result);
         });
     },

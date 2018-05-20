@@ -18,6 +18,7 @@ var burger = {
 
     insertOne: function(columns, values, cb){
         orm.insertOne('burgers', columns, values, function(result){
+            console.log("model burgerjs result: " + result);
             cb(result);
         });
     }, 
