@@ -25,6 +25,7 @@ var burger = {
 
     updateOne: function(objColVals, condition, cb){
         orm.updateOne('burgers', objColVals, condition, function(result){
+            console.log(result);
             cb(result);
         });
     }

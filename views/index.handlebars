@@ -1,11 +1,20 @@
 <h1>Index page!</h1>
+<h2>Burgers to be eaten</h2>
 <ul>
     {{#each burger}}
-    <li>
-        {{burger_name}}
-    </li>
+        {{#unless devoured}}
+            {{> burgers/burger-block devour= false}}
+        {{/unless}}
     {{/each}}
 </ul>
+
+<h2>Eaten Already</h2>
+{{#each burger}}
+    {{#if devoured}}
+        {{> burgers/burger-block devour = true}}
+
+    {{/if}}
+{{/each}}
 
 
 <h2>Add a Burger</h2>
