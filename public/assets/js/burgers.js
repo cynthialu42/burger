@@ -10,7 +10,7 @@ $(function() { // shorthand for $(document).ready(function(){})
             type: "POST",
             data: newBurger
         }).then(function(){
-            console.log("Added burger");
+            // console.log("Added burger");
             location.reload();
         });
     });
@@ -19,8 +19,8 @@ $(function() { // shorthand for $(document).ready(function(){})
 
         var id = $(this).data("id");
         var newDevour = !$(this).data("newdevoured");
-        console.log("id" + id);
-        console.log("newDevour" + newDevour);
+        // console.log("id" + id);
+        // console.log("newDevour" + newDevour);
         var newDevouredState = {
             devoured: newDevour
         };
@@ -29,7 +29,7 @@ $(function() { // shorthand for $(document).ready(function(){})
             type: "PUT",
             data: newDevouredState
         }).then(function(){
-            console.log("Changed burger to " + newDevour);
+            // console.log("Changed burger to " + newDevour);
             location.reload();
         });
     });

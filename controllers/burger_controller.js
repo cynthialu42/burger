@@ -5,9 +5,6 @@ var burger = require("../models/burger.js"),
 
 router.get("/", function(req, res){
     burger.selectAll(function(data){
-        //console.log(data);
-        // Sending array of burger objects from database
-        // to the index page as 'burger'
         res.render("index", {burger:data});
     });
 });
