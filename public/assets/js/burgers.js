@@ -2,7 +2,7 @@ $(function() { // shorthand for $(document).ready(function(){})
     $('.create-form').on("submit", function(event){
         event.preventDefault();
         var newBurger = {
-            burgerName : $("#name").val().trim()
+            burgerName : $("#name").val().trim().toUpperCase()
         };
 
 

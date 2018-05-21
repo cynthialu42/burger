@@ -1,3 +1,181 @@
+@font-face {
+    font-family: 'vlump';
+    src: url('../fonts/Vlump.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'vlump-black';
+    src: url('../fonts/VlumpBlack.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'badabb';
+    src: url('../fonts/BADABB.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'vcr';
+    src: url('../fonts/VCR.ttf') format('truetype');
+}
 .background {
-    background-color: rgb(218, 247, 218);
+    background-image: url('../images/wormz.png');
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+.top-bun {
+    width: 90%;
+    text-align: center;
+    background-color: orange;
+    height: 7em;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.burger-title {
+    font-family: vlump;
+    margin-top: 1.5em;
+    font-size: 2em;
+    font-family: vlump-black;
+}
+.lettuce {
+    width: 95%;
+    height: 20px;
+    /* overflow: hidden;
+    position: relative; */
+    background: green;
+   
+}
+.ellipse {
+    position: absolute;
+    background: radial-gradient(ellipse, transparent, transparent 7px, black 7px, black 10px, transparent 11px);
+    background-size: 36px 40px;
+    width: 100%;
+    height: 20px;
+    
+}
+
+.ellipse2 {
+    top: 20px;
+    left: 18px;
+    background-position: 0px -20px;
+    background: green;
+}
+
+.tomato {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
+    background: red;
+}
+.cheese {
+    width: 93%;
+    height: 10px;
+    background: yellow;
+    border-radius: 25px;
+}
+.burger-container{
+    display: flex;
+    width: 90%;
+    background: brown;
+    justify-content: space-between;
+    border-radius: 50px;
+}
+
+.left-container{
+    display: flex;
+    width: 45%;
+    margin: 1em 1em;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: vcr;
+}
+
+.right-container{
+    display: flex;
+    width: 45%;
+    margin: 1em 1em;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: vcr;
+
+    
+}
+.title {
+    width: 100%;
+    background: red;
+    text-align: center;
+    font-size: 2em;
+    font-family: badabb;
+}
+.eaten-burgers{
+    text-decoration: line-through;
+}
+.spacing {
+    padding: 5px;
+}
+.bottom-container{
+    background: orange;
+    width: 90%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding-top: 1em;
+    font-family: badabb;
+    font-size: 2em;
+}
+.mayo {
+    width: 85%;
+    background: white;
+    border-radius: 25px;
+    height: 6px;
+}
+.btn-style {
+    background: none;
+    border: 2px solid white;
+    padding: 10px;
+    margin-left: 2em;
+    color: white;
+    font-size: .5em;
+    font-family: vcr;
+}
+.btn-style:hover {
+    color: yellow;
+    border-color: yellow;
+}
+
+.input-box {
+    padding: 5px;
+    font-family: vcr;
+    font-size: 1em;
+}
+
+.btn-style-btm{
+    background: none;
+    color: white;
+    border: none;
+}
+
+.btn-style-btm:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.plate {
+    width: 100%;
+    height: 20px;
+    border-radius: 25px;
+    background: lightseagreen;
 }
